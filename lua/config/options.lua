@@ -4,3 +4,9 @@
 vim.g.autoformat = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+
+vim.filetype.add({
+  pattern = {
+    ['.*%.blade%.php'] = 'blade',
+  },
+})
