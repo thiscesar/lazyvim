@@ -8,7 +8,8 @@ return {
             "intelephense",
             "phpactor",
             "pint",
-            "prettierd"
+            "prettierd",
+			"prettier"
         },
     },
 }
