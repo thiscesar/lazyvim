@@ -16,14 +16,14 @@
   "css-ultramonitor-modules": {
     "prefix": ["ulm_css_modules"],
     "body": [
-      "<link rel=\"stylesheet\" href=\"<?= base_url('/assets/ultramonitor/css/modules/${1:module_name}/${2:file_name}.css'); ?>\">;"
+      "<link rel=\"stylesheet\" href=\"<?= base_url(\"/assets/ultramonitor/css/modules/${1:module_name}/${2:file_name}.css\"); ?>\">;"
     ],
     "description": "Ultramonitor importação de css específico em view"
   },
   "js-ultramonitor-plugins": {
     "prefix": ["ulm_js_plugins"],
     "body": [
-      "<script src=\"<?= base_url('assets/plugins/${1:module_name}/${2:file_name}.min.js'); ?>\"></script>"
+      "<script src=\"<?= base_url(\"assets/plugins/${1:module_name}/${2:file_name}.min.js\"); ?>\"></script>"
     ],
     "description": "Ultramonitor importação de plugins em view"
   },
