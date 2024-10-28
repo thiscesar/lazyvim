@@ -9,7 +9,8 @@ return {
             "phpactor",
             "pint",
             "prettierd",
-			"prettier"
+			"prettier",
+			"php-cs-fixer"
         },
     },
 }
