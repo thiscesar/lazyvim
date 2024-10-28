@@ -37,6 +37,24 @@
     ],
     "description": "Ultramonitor layout base para views autenticadas."
   },
+"section_scripts": {
+    "prefix": ["ulm_section_scripts"],
+    "body": [
+      "<?= \\$this->section('scripts') ?>",
+      "$1",
+      "<?= \\$this->endSection() ?>"
+    ],
+    "description": "Ultramonitor seção para scripts no layout."
+  },
+  "section_styles": {
+    "prefix": ["ulm_section_styles"],
+    "body": [
+      "<?= \\$this->section('styles') ?>",
+      "$1",
+      "<?= \\$this->endSection() ?>"
+    ],
+    "description": "Ultramonitor seção para estilos no layout."
+  },
   "permission": {
     "prefix": ["ulm_permission_check"],
     "body": [
