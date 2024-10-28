@@ -20,6 +20,13 @@
     ],
     "description": "Ultramonitor importação de css específico em view"
   },
+  "js-ultramonitor-plugins": {
+    "prefix": ["ulm_script_sweetalert"],
+    "body": [
+      "<script src=\"<?= base_url('assets/plugins/${1:module_name}/${2:file_name}.min.js'); ?>\"></script>"
+    ],
+    "description": "Ultramonitor importação de plugins em view"
+  },
   "ulm_layout_base": {
     "prefix": ["ulm_layout_base"],
     "body": [
