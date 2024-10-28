@@ -5,6 +5,12 @@ return {
     -- Mapeia o comando para corrigir o diretório inteiro
     vim.api.nvim_set_keymap(
       "n",
+      "<leader>cp",
+      "",
+      { desc = "PhpCsFixer"}
+    )
+    vim.api.nvim_set_keymap(
+      "n",
       "<leader>cpd",
       ":call PhpCsFixerFixDirectory()<CR>",
       { desc = "PhpCsFixerFixDirectory", noremap = true, silent = true }
