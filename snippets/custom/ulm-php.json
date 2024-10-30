@@ -37,7 +37,18 @@
     ],
     "description": "Ultramonitor layout base para views autenticadas."
   },
-"section_scripts": {
+  "swal_fire_alert": {
+    "prefix": ["swal_alert"],
+    "body": [
+      "Swal.fire({",
+      "    icon: \"${1:icon}\",",
+      "    title: \"${2:text}\",",
+      "    confirmButtonText: \"OK\"",
+      "});"
+    ],
+    "description": "Exibe um alerta usando SweetAlert2 com ícone e texto."
+  },
+  "section_scripts": {
     "prefix": ["ulm_section_scripts"],
     "body": [
       "<?= \\$this->section('scripts') ?>",
