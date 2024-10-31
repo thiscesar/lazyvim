@@ -6,7 +6,7 @@ return {
             "docker-compose-language-service",
             "dockerfile-language-server",
             "intelephense",
-			--"phpactor",
+			"phpactor",
             "pint",
             "prettierd",
 			"prettier",
