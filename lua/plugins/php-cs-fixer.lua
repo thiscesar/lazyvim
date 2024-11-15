@@ -3,12 +3,7 @@ return {
   lazy = false,
   config = function()
     -- Mapeia o comando para corrigir o diretório inteiro
-    vim.api.nvim_set_keymap(
-      "n",
-      "<leader>cp",
-      "",
-      { desc = "PhpCsFixer"}
-    )
+    vim.api.nvim_set_keymap("n", "<leader>cp", "", { desc = "PhpCsFixer" })
     vim.api.nvim_set_keymap(
       "n",
       "<leader>cpd",
@@ -48,5 +43,14 @@ return {
     vim.g.php_cs_fixer_dry_run = 0 -- Chama o comando com a opção dry-run
     vim.g.php_cs_fixer_verbose = 0 -- Retorna a saída do comando se 1, caso contrário, uma informação inline.
     -- vim.g.php_cs_fixer_ignore_env = 1                 -- Ignorar quaisquer requisitos de ambiente
+    --
+    --
+    -- Autocomando para php-cs-fixer
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      pattern = "*.php",
+      callback = function()
+        vim.cmd("silent! call PhpCsFixerFixFile()")
+      end,
+    })
   end,
 }

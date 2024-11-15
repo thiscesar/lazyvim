@@ -12,10 +12,3 @@ vim.filetype.add({
   },
 })
 
--- Autocomando para php-cs-fixer
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "*.php",
-  callback = function()
-    vim.cmd("silent! call PhpCsFixerFixFile()")
-  end,
-})
