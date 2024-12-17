@@ -1,0 +1,78 @@
+{
+  "controller_view_build": {
+    "prefix": ["ulm_controller_view_build"],
+    "body": [
+      "\t\\$result = [];",
+      "\t\\$title = \"${1:Titulo}\";",
+      "\treturn view(\"modules/lembretes/index\", compact(\"title\", \"result\"));"
+    ],
+    "description": "Ultramonitor construtor de view para o controller com pré definições."
+  },
+  "flash_message": {
+    "prefix": ["ulm_flash_set"],
+    "body": ["flash(\"${1:success}\",\"${2:message}\");"],
+    "description": "Ultramonitor construtor de view para o controller com pré definições."
+  },
+  "css-ultramonitor-modules": {
+    "prefix": ["ulm_css_modules"],
+    "body": [
+      "<link rel=\"stylesheet\" href=\"<?= base_url(\"/assets/ultramonitor/css/modules/${1:module_name}/${2:file_name}.css\"); ?>\">;"
+    ],
+    "description": "Ultramonitor importação de css específico em view"
+  },
+  "js-ultramonitor-plugins": {
+    "prefix": ["ulm_js_plugins"],
+    "body": [
+      "<script src=\"<?= base_url(\"assets/plugins/${1:module_name}/${2:file_name}.min.js\"); ?>\"></script>"
+    ],
+    "description": "Ultramonitor importação de plugins em view"
+  },
+  "ulm_layout_base": {
+    "prefix": ["ulm_layout_base"],
+    "body": [
+      "<?= \\$this->extend('layouts/authenticated.php') ?>",
+      "<?= \\$this->section('content') ?>",
+      "$1",
+      "<?= \\$this->endSection() ?>"
+    ],
+    "description": "Ultramonitor layout base para views autenticadas."
+  },
+  "swal_fire_alert": {
+    "prefix": ["swal_alert"],
+    "body": [
+      "Swal.fire({",
+      "    icon: \"${1:icon}\",",
+      "    title: \"${2:text}\",",
+      "    confirmButtonText: \"OK\"",
+      "});"
+    ],
+    "description": "Exibe um alerta usando SweetAlert2 com ícone e texto."
+  },
+  "section_scripts": {
+    "prefix": ["ulm_section_scripts"],
+    "body": [
+      "<?= \\$this->section('scripts') ?>",
+      "$1",
+      "<?= \\$this->endSection() ?>"
+    ],
+    "description": "Ultramonitor seção para scripts no layout."
+  },
+  "section_styles": {
+    "prefix": ["ulm_section_styles"],
+    "body": [
+      "<?= \\$this->section('styles') ?>",
+      "$1",
+      "<?= \\$this->endSection() ?>"
+    ],
+    "description": "Ultramonitor seção para estilos no layout."
+  },
+  "permission": {
+    "prefix": ["ulm_permission_check"],
+    "body": [
+      "\t\\$rolesAlloweds = [Role::ADMIN->value];",
+      "\tif (!in_array(userRole(), \\$rolesAlloweds)) {",
+      "\t\t\\$this->denied();",
+      "\t}"
+    ]
+  }
+}
