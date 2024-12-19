@@ -23,7 +23,7 @@
   "boom_handle_exception": {
     "prefix": ["boom_handle_exception"],
     "body": [
-      "\t\thandleException(\\$e, '${1:module_name}', false);"
+      "handleException(\\$e, '${1:module_name}', false);"
     ],
     "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
   }
