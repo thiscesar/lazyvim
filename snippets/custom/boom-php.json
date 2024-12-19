@@ -16,7 +16,14 @@
       "\t\\$sqlBuild = SqlBuild::update(\"sis_${1:table_name}\",\\$data, \\$criteria);",
       "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
       "\t\\$result = \\$statement->execute(\\$sqlBuild[\"parameters\"]);",
-	  "\treturn \\$result->getAffectedRows() > 0;"
+      "\treturn \\$result->getAffectedRows() > 0;"
+    ],
+    "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
+  },
+  "boom_handle_exception": {
+    "prefix": ["boom_handle_exception"],
+    "body": [
+      "\t\thandleException(\\$e, '${1:module_name}', false);"
     ],
     "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
   }
