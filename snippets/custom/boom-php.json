@@ -1,0 +1,21 @@
+{
+  "boom_db_insert": {
+    "prefix": ["boom_db_insert"],
+    "body": [
+      "\t\\$sqlBuild = SqlBuild::insert(\"sis_${1:table_name}\", \\$data);",
+      "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
+      "\t\\$statement->execute(\\$sqlBuild[\"parameters\"]);",
+      "\t\\$lastInsertId = \\$this->adapter->getDriver()->getLastGeneratedValue();"
+    ],
+    "description": "Boom snippet para inset com proteção de injection"
+  },
+  "boom_db_update": {
+    "prefix": ["boom_db_update"],
+    "body": [
+      "\t\\$sqlBuild = SqlBuild::update(\"sis_${1:table_name}\",\\$data, \\$criteria);",
+      "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
+      "\t\\$statement->execute(\\$sqlBuild[\"parameters\"]);"
+    ],
+    "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
+  }
+}

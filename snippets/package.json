@@ -7,18 +7,7 @@
     "snippets": [
       {
         "language": "php",
-        "path": "./custom/ulm-php.json"
-      },
-      {
-        "language": "php",
-        "path": "./custom/sm-php.json"
-      },
-      {
-        "language": [
-          "php",
-          "js"
-        ],
-        "path": "./custom/sm-js.json"
+        "path": "./custom/boom-php.json"
       }
     ]
   }
