@@ -15,7 +15,8 @@
       "\t\\$criteria = ['${1:key}_id' => ${2:value}];",
       "\t\\$sqlBuild = SqlBuild::update(\"sis_${1:table_name}\",\\$data, \\$criteria);",
       "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
-      "\t\\$result = \\$statement->execute(\\$sqlBuild[\"parameters\"]);"
+      "\t\\$result = \\$statement->execute(\\$sqlBuild[\"parameters\"]);",
+	  "\t\\return \\$result->getAffectedRows() > 0"
     ],
     "description": "Construtor de operações de update no banco de dados utilizando SqlBuild."
   }
