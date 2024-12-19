@@ -12,6 +12,7 @@
   "boom_db_update": {
     "prefix": ["boom_db_update"],
     "body": [
+      "\t\\$criteria = ['${1:key}_id' => ${2:value}];",
       "\t\\$sqlBuild = SqlBuild::update(\"sis_${1:table_name}\",\\$data, \\$criteria);",
       "\t\\$statement = \\$this->adapter->createStatement(\\$sqlBuild[\"sql\"]);",
       "\t\\$statement->execute(\\$sqlBuild[\"parameters\"]);"
